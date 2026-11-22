@@ -1,16 +1,15 @@
 import { test, expect } from '@playwright/test'
-import { HomePage } from '../pom/homepage';
-let homePage: HomePage;
+
 test.beforeEach(async ({ page }) => {
     await page.goto('https://shop-look.vercel.app/')
-    homePage = new HomePage(page);
 })
 test.describe('Shop Look Tests', () => {
    
     //tags
 test('Search for a product', { tag: '@regression' }, async ({ page }) => {
   
-    await homePage.searchForProduct('Laptop')
+    await page.getByRole('searchbox').fill('Laptop')
+    await page.keyboard.press('Enter')
 })
 test ('Today Deals', { tag: '@smoke' }, async ({ page }) => {
 
