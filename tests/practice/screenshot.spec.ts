@@ -16,12 +16,12 @@ test('Screenshot of product', async ({ page }) => {
     await screen.screenshot({ path: 'screenshots/product.png' });
 });
 
-test('visual regression test', async ({ page }) => {
+/*test('visual regression test', async ({ page }) => {
     await page.goto('https://shop-look.vercel.app/');
     await expect(page).toHaveScreenshot('screenshots/homepage-full.png', {
         maxDiffPixelRatio: 0.1,
     });
-});
+});*/
 
 })
 

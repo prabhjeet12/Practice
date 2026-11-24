@@ -22,10 +22,7 @@ test.describe('Checkbox Handling', () => {
         await expect(page.locator('#checkbox-1')).toBeChecked();    
     })
 
-    test.afterAll(async ({ page }) => {
-        await page.close();
-    })
-
+    
 
 
 

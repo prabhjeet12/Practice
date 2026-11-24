@@ -17,6 +17,3 @@ await page.getByTestId('hero-cta-view-deals').click()
 await expect(page).toHaveURL('https://shop-look.vercel.app/deals')
 })
 })
-test.afterEach(async ({ page }) => {
-    await page.close()
-})
