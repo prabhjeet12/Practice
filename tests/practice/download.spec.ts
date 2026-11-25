@@ -22,7 +22,9 @@ import {test, expect} from '@playwright/test';
 
 
 test ('Download from DemoQASite', async ({ page }) => {
-    await page.goto('https://demoqa.com/upload-download?utm_source=chatgpt.com');
+    await page.goto('https://demoqa.com/upload-download', {
+    waitUntil: 'domcontentloaded'
+});
    
 
     const [demodnld] = await Promise.all([
